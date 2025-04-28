@@ -12,7 +12,7 @@ class Analyzer:
     def __init__(self, game):
         """
         Initialize an Analyzer with a Game object.
-        Throws ValueError if the passed value is not a Game object
+        Throws error is input, game, is not a Game object.
         """
         if not isinstance(game, Game):
             raise ValueError("Input must be a Game object")
@@ -20,6 +20,7 @@ class Analyzer:
         
     def jackpot(self):
         """ Compute how many times the game resulted in all faces being the same.
+        Takes no input and returns the number of jackpots as a number.
         """
         # Get the results in wide format
         results = self.game.show_outcome("wide")
