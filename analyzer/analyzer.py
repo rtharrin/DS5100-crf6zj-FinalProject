@@ -1,7 +1,7 @@
 import pandas as pd
 from itertools import combinations_with_replacement, permutations
 from collections import Counter
-from game.game import Game
+from game import Game
 
 class Analyzer:
     """
@@ -26,7 +26,7 @@ class Analyzer:
         results = self.game.show_outcome("wide")
         # Check each row (roll) to see if all values in that roll are the same
         jackpots = results.apply(lambda x: x.nunique() == 1, axis=1)
-        return jackpots.sum()
+        return int(jackpots.sum())
     
     def face_counts_per_roll(self):
         """

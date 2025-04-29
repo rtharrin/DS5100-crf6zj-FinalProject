@@ -30,7 +30,7 @@ class TestAnalyzer(unittest.TestCase):
     def test_jackpot(self):
         """Test jackpot counting method"""
         jackpots = self.analyzer.jackpot()
-        self.assertIsInstance(jackpots, np.int64)
+        self.assertIsInstance(jackpots, int)
         self.assertTrue(jackpots >= 0)
         
     def test_face_counts_per_roll(self):
