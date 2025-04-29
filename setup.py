@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='simulator',
+    name='monte-carlo',
     version='1.0.0',
     description='A Monte Carlo simulator package with Die, Game, and Analyzer classes',
     url='https://github.com/rtharrin/DS5100-crf6zj-FinalProject',
@@ -10,8 +10,6 @@ setup(
     packages=['monte-carlo'],
     install_requires=[
         'numpy',
-        'pandas',
-        'itertools',
-        'collections'
+        'pandas'
     ]
 )
