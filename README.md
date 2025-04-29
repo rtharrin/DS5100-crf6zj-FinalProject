@@ -20,11 +20,11 @@ pip install
 You can create a die class by passing it a numpy array of characters or numbers
 
 ```
-import simulator.die as d
+import montecarlo.simulator as s
 
 tmp =np.array(['A','B','C','D','E','F'])
 
-die1=d.Die(tmp)
+die1=s.Die(tmp)
 
 die1.showdie()
 ```
@@ -47,11 +47,9 @@ die1.roll_die(3)
 Game class expectia a list of die objects.  Rolls the dies numerous times and stores results in private outcome object. Game objects only keep results of most recent play.
 
 ```
-import simulator.game as g
-
 tmp_lst = [die1,die1]
 
-test_game = g.Game(tmp_lst)
+test_game = s.Game(tmp_lst)
 
 test_game.play(4)
 
@@ -67,9 +65,7 @@ test_game.show_outcome("narrow")
 ## Using the Analyzer Class
 
 ```
-import simulator.analyzer as a
-
-analyze_test = a.Analyzer(test_game)
+analyze_test = s.Analyzer(test_game)
 analyze_test.jackpot()
 ```
 
