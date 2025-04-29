@@ -7,9 +7,11 @@ setup(
     url='https://github.com/rtharrin/DS5100-crf6zj-FinalProject',
     author='Ryan Harrington',  
     license='MIT',
-    packages=['simulator'],
+    packages=['monte-carlo'],
     install_requires=[
         'numpy',
-        'pandas'
+        'pandas',
+        'itertools',
+        'collections'
     ]
 )
