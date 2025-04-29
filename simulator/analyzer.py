@@ -1,7 +1,7 @@
 import pandas as pd
 from itertools import combinations_with_replacement, permutations
 from collections import Counter
-from game import Game
+from simulator.game import Game
 
 class Analyzer:
     """

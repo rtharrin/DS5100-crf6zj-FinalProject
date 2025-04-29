@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import pandas as pd
 from simulator.dice import Die
-from game import Game
+from simulator.game import Game
 
 class TestGame(unittest.TestCase):
     """Unit tests for the Game class"""
