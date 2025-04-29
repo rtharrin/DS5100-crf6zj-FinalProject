@@ -62,3 +62,7 @@ test_game.show_outcome("narrow")
 
 ## Using the Analyzer Class
 
+```
+analyze_test = Analyzer(test_game)
+analyze_test.jackpot()
+```
