@@ -1,9 +1,9 @@
 import unittest
 import numpy as np
 import pandas as pd
-from die.dice import Die
+from simulator.dice import Die
 from game import Game
-from analyzer.analyzer import Analyzer
+from simulator.analyzer import Analyzer
 
 class TestAnalyzer(unittest.TestCase):
     """Unit tests for the Analyzer class"""
