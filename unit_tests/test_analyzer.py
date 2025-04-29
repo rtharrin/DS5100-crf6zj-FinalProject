@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import pandas as pd
 from die.dice import Die
-from game.game import Game
+from game import Game
 from analyzer.analyzer import Analyzer
 
 class TestAnalyzer(unittest.TestCase):
