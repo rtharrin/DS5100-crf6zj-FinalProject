@@ -40,7 +40,7 @@ and roll the die using the roll_die method
 die1.roll_die(3)
 ```
 
-# Using the Game Class
+## Using the Game Class
 
 Game class expectia a list of die objects.  Rolls the dies numerous times and stores results in private outcome object. Game objects only keep results of most recent play.
 
@@ -60,3 +60,9 @@ show_outcome has 2 utput formats, wide and narrow
 test_game.show_outcome("narrow")
 ```
 
+## Using the Analyzer Class
+
+```
+analyze_test = Analyzer(test_game)
+analyze_test.jackpot()
+```

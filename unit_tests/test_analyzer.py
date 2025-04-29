@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import pandas as pd
 from die.dice import Die
-from game.game import Game
+from game import Game
 from analyzer.analyzer import Analyzer
 
 class TestAnalyzer(unittest.TestCase):
@@ -30,7 +30,7 @@ class TestAnalyzer(unittest.TestCase):
     def test_jackpot(self):
         """Test jackpot counting method"""
         jackpots = self.analyzer.jackpot()
-        self.assertIsInstance(jackpots, np.int64)
+        self.assertIsInstance(jackpots, int)
         self.assertTrue(jackpots >= 0)
         
     def test_face_counts_per_roll(self):
