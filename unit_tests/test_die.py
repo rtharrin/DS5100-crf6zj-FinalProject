@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 import pandas as pd
-from die.dice import Die
+from simulator.dice import Die
 
 class TestDie(unittest.TestCase):
     """Unit tests for the Die class"""

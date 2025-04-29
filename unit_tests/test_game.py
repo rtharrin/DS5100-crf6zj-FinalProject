@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 import pandas as pd
-from die.dice import Die
+from simulator.dice import Die
 from game import Game
 
 class TestGame(unittest.TestCase):
