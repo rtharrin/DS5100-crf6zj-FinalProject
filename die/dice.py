@@ -36,7 +36,8 @@ class Die:
         
     def roll_die(self,num_rolls=1):
         """Method to roll the dice, returns a list of results. 
-        Takes one optional parameter, num_rolls, identifying number of rolls desired, defaults to 1 roll"""
+        Takes one optional parameter, num_rolls, identifying number of rolls desired, defaults to 1 roll.
+        results are not stored internally"""
         tmp = list(self.df.sample(n=num_rolls,replace=True,weights=self.df['Weight']).index)
         return tmp
     
