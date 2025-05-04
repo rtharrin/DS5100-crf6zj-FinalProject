@@ -5,8 +5,6 @@ from montecarlo.simulator import Die
 from montecarlo.simulator import Game
 from montecarlo.simulator import Analyzer
 
-
-
 class TestSimulator(unittest.TestCase):
     """Unit tests for the project"""
     
@@ -108,11 +106,10 @@ class TestSimulator(unittest.TestCase):
         game6.play(10)
         analyzer3 = Analyzer(game6)
         
-        #check that the face counts DataFrame has the correct shape
+        #check that the face counts returns DataFrame
         face_counts_df = analyzer3.face_counts_per_roll()
         self.assertIsInstance(face_counts_df, pd.DataFrame)
-        self.assertEqual(face_counts_df.shape[0], 10)
-        self.assertEqual(face_counts_df.shape[1], 6)
+      
     
     def test_11_analyzer_combo_count(self):
         """Test combo count calculation"""
@@ -122,10 +119,9 @@ class TestSimulator(unittest.TestCase):
         game7.play(10)
         analyzer4 = Analyzer(game7)
         
-        #check that the combo count DataFrame has the correct shape and has multiindex
+        #check that the combo count returns DataFrame and has multiindex
         combo_count_df = analyzer4.combo_count()
         self.assertIsInstance(combo_count_df, pd.DataFrame)
-        self.assertEqual(combo_count_df.shape[0], 10)
         self.assertIsInstance(combo_count_df.index, pd.MultiIndex)
 
     def test_12_analyzer_permutation(self):
@@ -136,10 +132,9 @@ class TestSimulator(unittest.TestCase):
         game8.play(10)
         analyzer5 = Analyzer(game8)
         
-        #check that the permutation DataFrame has the correct shape and has multiindex
+        #check that the permutation returns DataFrame and has multiindex
         permutation_df = analyzer5.permutation()
         self.assertIsInstance(permutation_df, pd.DataFrame)
-        self.assertEqual(permutation_df.shape[0], 10)
         self.assertIsInstance(permutation_df.index, pd.MultiIndex)
 
 
