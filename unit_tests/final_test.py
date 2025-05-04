@@ -133,7 +133,7 @@ class TestSimulator(unittest.TestCase):
         analyzer5 = Analyzer(game8)
         
         #check that the permutation returns DataFrame and has multiindex
-        permutation_df = analyzer5.permutation()
+        permutation_df = analyzer5.permutation_count()
         self.assertIsInstance(permutation_df, pd.DataFrame)
         self.assertIsInstance(permutation_df.index, pd.MultiIndex)
 
